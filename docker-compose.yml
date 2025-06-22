@@ -32,7 +32,7 @@ services:
     volumes:
       - ./promtail-config.yml:/etc/promtail/promtail-config.yml
       - ./positions.yaml:/etc/promtail/positions.yaml
-      - C:/Users/Pablo/Desktop/ArquiSoftII/tp2/Obervability-System/logs:/logs
+      - ${LOGS_FOLDER}:/logs
     command: -config.file=/etc/promtail/promtail-config.yml
 
 volumes:
