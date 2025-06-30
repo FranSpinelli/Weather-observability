@@ -15,5 +15,11 @@ scrape_configs:
       - targets:
           - localhost
         labels:
-          job: logs
-          __path__: /logs/*.log
+          job: weather-loader-component-logs
+          __path__: /logs/weather-loader-component/*.log
+          
+      - targets:
+          - localhost
+        labels:
+          job: weather-metrics-component-logs
+          __path__: /logs/weather-metrics-component/*.log 
